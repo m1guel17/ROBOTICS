@@ -10,8 +10,7 @@ import sympy as sp
 from sympy import symbols as syms
 dx = sp.symbols("dx"); dy = sp.symbols("dy"); dz = sp.symbols("dz")
 x = syms("x"); y = syms("y"); z = syms("z")
-# =============================================================================
-n = 10 # Decimales de precisión 
+
 # =============================================================================
 # Pure Rotation about the x-axis | Rotation about the n-axis | ROLL
 def trotx(x):
@@ -22,10 +21,10 @@ def trotx(x):
                           [0,         0,         0, 1]])
     else:
         x = x*np.pi / 180
-        return np.round(np.matrix([[1,         0,         0, 0],
-                                   [0, np.cos(x),-np.sin(x), 0],
-                                   [0, np.sin(x), np.cos(x), 0],
-                                   [0,         0,         0, 1]]),n)
+        return np.matrix([[1,         0,         0, 0],
+                          [0, np.cos(x),-np.sin(x), 0],
+                          [0, np.sin(x), np.cos(x), 0],
+                          [0,         0,         0, 1]])
 # =============================================================================
 # Pure Rotation about the y-axis | Rotation about the o-axis | PITCH
 def troty(y):
@@ -36,10 +35,10 @@ def troty(y):
                           [0,         0,         0, 1]])
     else:
         y = y*np.pi / 180
-        return np.round(np.matrix([[np.cos(y), 0, np.sin(y), 0],
-                                   [0,         1,         0, 0],
-                                   [-np.sin(y),0, np.cos(y), 0],
-                                   [0,         0,         0, 1]]),n)
+        return np.matrix([[np.cos(y), 0, np.sin(y), 0],
+                          [0,         1,         0, 0],
+                          [-np.sin(y),0, np.cos(y), 0],
+                          [0,         0,         0, 1]])
 # =============================================================================
 # Pure Rotation about the z-axis | Rotation about the a-axis | YAW
 def trotz(z):
@@ -56,10 +55,10 @@ def trotz(z):
 # =============================================================================
     else:
         z = z*np.pi / 180
-        return np.round(np.matrix([[np.cos(z),-np.sin(z), 0, 0],
-                                   [np.sin(z), np.cos(z), 0, 0],
-                                   [0,         0,         1, 0],
-                                   [0,         0,         0, 1]]),n)
+        return np.matrix([[np.cos(z),-np.sin(z), 0, 0],
+                          [np.sin(z), np.cos(z), 0, 0],
+                          [0,         0,         1, 0],
+                          [0,         0,         0, 1]])
 # =============================================================================
 # Composed Rotations | trotx(x)@troty(y)@trotz(z)
 def trotxyz(x,y,z):
@@ -73,10 +72,10 @@ def transl(x,y,z):
                           [0, 0, 1, z],
                           [0, 0, 0, 1]])
     else:
-        return np.round(np.matrix([[1, 0, 0, x],
-                                   [0, 1, 0, y],
-                                   [0, 0, 1, z],
-                                   [0, 0, 0, 1]]),n)
+        return np.matrix([[1, 0, 0, x],
+                          [0, 1, 0, y],
+                          [0, 0, 1, z],
+                          [0, 0, 0, 1]])
 
 
 Fnoa = np.matrix([[1, 0, 0, 0],
