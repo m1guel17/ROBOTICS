@@ -11,7 +11,7 @@ from sympy import symbols as syms
 dx = sp.symbols("dx"); dy = sp.symbols("dy"); dz = sp.symbols("dz")
 x = syms("x"); y = syms("y"); z = syms("z")
 # =============================================================================
-n = 5 # Decimales de precisión 
+n = 10 # Decimales de precisión 
 # =============================================================================
 # Pure Rotation about the x-axis | Rotation about the n-axis | ROLL
 def trotx(x):
