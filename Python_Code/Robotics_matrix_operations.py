@@ -76,7 +76,7 @@ def transl(x,y,z):
         return np.round(np.matrix([[1, 0, 0, x],
                                    [0, 1, 0, y],
                                    [0, 0, 1, z],
-                                   [0, 0, 0, 1]]),2)
+                                   [0, 0, 0, 1]]),n)
 
 
 Fnoa = np.matrix([[1, 0, 0, 0],
