@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sat Jun 18 20:41:20 2022
-
 @author: ESTEBAN
 """
 # ======= Libería basada en Robotics Toolbox de Peter Corke para MATLAB =======
