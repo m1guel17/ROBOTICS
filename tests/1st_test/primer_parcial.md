@@ -1,7 +1,10 @@
 # ROBÓTICA - PRIMER PARCIAL
 **1.** Con sus palabras:
+
     a. ¿Qué es un robot?
+ 
     b. De ejemplos de actuadores, sensores y elementos terminales en robots
+    
 **2.** Un sistema Fnoa ha sido girado 90º alrededor del eje X y posteriormente trasladado por el vector pxyz(8, -4, 12). Calcule las coordenadas Rx, Ry y Rz, del vector R con coordenadas Rnoa(-3, 4, -11). Use las matrices de transformación
 **3.** Partiendo de que se está trabajando en el plano XY (z=0) y utilizando la información disponible en la siguiente figura determine:
 >___________________________________________![image](https://user-images.githubusercontent.com/63883454/197371544-4021797a-5bbc-46c9-86a1-0beb0bd4c01f.png)
